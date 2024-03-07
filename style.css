@@ -1,9 +1,88 @@
+/* CSS for for Plyr Plugin  
+https://cdn.plyr.io/3.7.8/plyr.css
+*/
+
+/* CSS Variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --plyr-color-main: white;
+    --plyr-audio-controls-background: red;
+    --plyr-audio-control-color: lightgrey;
+    --plyr-audio-control-color-hover: #b7142fbd ;
+    --plyr-audio-progress-buffered-background: white;
+    --plyr-font-family: sans-serif;
+    --plyr-font-size-time: 22px;
+    --plyr-tooltip-background: #b7142fbd;
+    --plyr-tooltip-color: white; 
+    icon size 
+    --plyr-control-icon-size: 32px;
+}
+
 body {
-    background: rgb(236, 18, 18);
+  background-image: url(https://assets.codepen.io/16425/blackbg.jpg);
+  background-repeat: repeat;
+}
 
+/* Layout */
+main {
+  background-color: #b7142fbd; 
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+main img {
+    max-width: 100%;
+    display: block;
+}
+
+main h1 {
+  color: white;
+  text-align: center;
+}
+
+main article {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  margin-top: 60px;
+}
+
+main article figure {
+  background: grey;
+  color:white;
+  padding: 1em;
+  margin: 0;
+}
+
+
+Main  {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
  
-}   
 
-    h1 {
-        color: antiquewhite;
-    }
+@media  (max-width: 400px) {
+  
+  :root {
+    --plyr-font-size-time: 24px;
+    --plyr-control-icon-size: 24px;
+  }
+  
+  main h1 {
+    font-size: .85em;
+  }
+  
+  main article {
+    flex-direction: column
+  }
+  
+  
+}
